@@ -1,4 +1,5 @@
-@prefix : <http://bibframe.org/vocab/> .
+@prefix : <http://bibframe.org/vocab/>
+@prefix kbsv: <https://id.kb.se/vocab/> .
 
 <http://data.lib.ltu.se/hold/item/123> a :Item ;
     :heldBy <https://libris.kb.se/library/LTUd> ;
@@ -11,12 +12,17 @@
     :heldBy <https://libris.kb.se/library/APIS> ;
     :itemOf <http://libris.kb.se/resource/bib/17650993> ;
     :electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:scb-2015-x43br1501_pdf" ;
-    :identifier [:identifierScheme "urn" :identifierValue "urn:nbn:se:scb-2015-x43br1501_pdf" ] .
+    :identifier [:identifierScheme "urn" ; :identifierValue "urn:nbn:se:scb-2015-x43br1501_pdf" ] .
         
 <http://data.kb.se/hold/item/42670731> a :Item ;
     :heldBy <https://libris.kb.se/library/APIS> ;
     :itemOf <http://libris.kb.se/resource/bib/17641863> ;
     :electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:kb:dark-4530939" ;
-    :identifier [:identifierScheme "urn" :identifierValue "urn:nbn:se:kb:dark-4530939" ] .
+    :identifier [:identifierScheme "urn" ; :identifierValue "urn:nbn:se:kb:dark-4530939" ] .
         
-        
+<http://data.kb.se/hold/item/40358717> a :Item ;
+    :heldBy <https://libris.kb.se/library/S> ;
+    :itemOf <http://libris.kb.se/resource/bib/14978722> ;
+    :shelfMark "Sv2014Q 793" ;
+    :copyNote "nb2014mon" , "evaabr" .        
+

@@ -7,3 +7,9 @@
     :copyNote "Online access for LTU",
         "Springer eBooks (Complete English Language/International Collection 2010)" .
         
+<http://data.kb.se/hold/item/42683210> a :Item ;
+    :heldBy <https://libris.kb.se/library/APIS> ;
+    :itemOf <http://libris.kb.se/resource/bib/17650993> ;
+    :electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:scb-2015-x43br1501_pdf" ;
+    :identifier [:identifierScheme "urn" :identifierValue "urn:nbn:se:scb-2015-x43br1501_pdf" ] .
+        

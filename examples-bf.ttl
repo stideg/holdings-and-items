@@ -13,3 +13,10 @@
     :electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:scb-2015-x43br1501_pdf" ;
     :identifier [:identifierScheme "urn" :identifierValue "urn:nbn:se:scb-2015-x43br1501_pdf" ] .
         
+<http://data.kb.se/hold/item/42670731> a :Item ;
+    :heldBy <https://libris.kb.se/library/APIS> ;
+    :itemOf <http://libris.kb.se/resource/bib/17641863> ;
+    :electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:kb:dark-4530939" ;
+    :identifier [:identifierScheme "urn" :identifierValue "urn:nbn:se:kb:dark-4530939" ] .
+        
+        

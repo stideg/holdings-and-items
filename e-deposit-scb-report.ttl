@@ -1,0 +1,43 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix sdo: <http://schema.org/> .
+@prefix bf1: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab/> . # TODO: new URI?
+@prefix : <https://id.kb.se/vocab/> .
+@base <https://libris.kb.se/> .
+
+## E-plikt, rapport från SCB:
+
+</42683210#it> a sdo:SomeProducts, sdo:Offer, bf1:HeldMaterial, bf2:Item ;
+    :acquisitionStatus :CurrentlyReceived ;
+    :retentionPolicy :PermanentlyRetained ;
+    sdo:inventoryLevel 1 ;
+    bf1:heldBy <https://libris.kb.se/library/APIS> ;
+    bf1:holdingFor <http://libris.kb.se/resource/bib/17650993#it> ;
+    :moreSpecifically
+          [ a sdo:IndividualProduct ;
+            bf1:heldBy <https://libris.kb.se/library/APIS> ;
+            sdo:inventoryLevel 1 ;
+            bf1:electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:scb-2015-x43br1501_pdf" ;
+            bf1:identifier [a bf1:identifierScheme "urn" ;
+             bf1:identifierValue "urn:nbn:se:scb-2015-x43br1501_pdf" ] .
+
+## SCBs holding. De har inte preciserat mer info än sigel. Då går det inte heller säga ngt om antalet exemplar.
+
+</42683212#it> a sdo:SomeProducts, sdo:Offer, bf1:HeldMaterial, bf2:Item ;
+    :acquisitionStatus :CurrentlyReceived ;
+    :retentionPolicy :PermanentlyRetained ;
+    sdo:inventoryLevel ;
+    bf1:heldBy <https://libris.kb.se/library/B> ;
+    bf1:holdingFor <http://libris.kb.se/resource/bib/17650993#it> ;
+
+## Samma exempel som överst men enbart bibframe 2:
+
+<http://data.kb.se/hold/item/42683210> a bf2:Item ;
+    bf2:itemId "42683210" ;
+    bf2:heldBy <https://libris.kb.se/library/APIS> ;
+    bf2:itemOf <http://libris.kb.se/resource/bib/17650993> ;
+    bf2:electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:scb-2015-x43br1501_pdf" ;
+    bf2:identifier [a bf2:identifierScheme "urn" ;
+     bf2:identifierValue "urn:nbn:se:scb-2015-x43br1501_pdf" ] .

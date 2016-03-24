@@ -1,0 +1,29 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix sdo: <http://schema.org/> .
+@prefix bf1: <http://bibframe.org/vocab/> .
+@prefix bf2: <http://bibframe.org/vocab/> . # TODO: new URI?
+@prefix : <https://id.kb.se/vocab/> .
+@base <https://libris.kb.se/> .
+
+## Ex 3 Svensk bok med SVQ-signum. Har här lagt på REF samt exemplar A och B. Är lite osäker på hur man skriver i beståndsposterna i Libris idag när det finns Ex A, B och REF.
+
+</40358717#it> a sdo:SomeProducts, sdo:Offer, bf1:HeldMaterial, bf2:Item ;
+    :acquisitionStatus :CurrentlyReceived ;
+    :retentionPolicy :PermanentlyRetained ;
+    sdo:inventoryLevel 3 ;
+    bf1:heldBy <https://libris.kb.se/library/S> ;
+    bf1:holdingFor </14978722#it> ;
+    :cataloguersNote "nb2014mon" , "evaabr"
+    :technicalNote "nbv201437" ;
+    :moreSpecifically
+        [ a sdo:IndividualProduct ;
+            sdo:inventoryLevel 1 ;
+            bf1:shelfMark "REF" ] ,
+        [ a sdo:IndividualProduct ;
+            sdo:inventoryLevel 1 ;
+            bf1:shelfMark "SV2014Q 793 A" ] ,
+        [ a sdo:IndividualProduct ;
+            sdo:inventoryLevel 1 ;
+            bf1:shelfMark "SV2014Q 793 B" ] .

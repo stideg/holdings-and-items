@@ -4,31 +4,27 @@
 @prefix sdo: <http://schema.org/> .
 @prefix bf1: <http://bibframe.org/vocab/> .
 @prefix bf2: <http://bibframe.org/vocab/> . # TODO: new URI?
-@prefix : <https://id.kb.se/vocab/> .
+@prefix kbv: <https://id.kb.se/vocab/> .
 @base <https://libris.kb.se/> .
 
 ## E-plikt, rapport från SCB:
 
-</42683210#it> a sdo:SomeProducts, sdo:Offer, bf1:HeldMaterial, bf2:Item ;
+</42683210#it> a kbv:Holding ;
     :acquisitionStatus :CurrentlyReceived ;
     :retentionPolicy :PermanentlyRetained ;
-    sdo:inventoryLevel 1 ;
     bf1:heldBy <https://libris.kb.se/library/APIS> ;
     bf1:holdingFor <http://libris.kb.se/resource/bib/17650993#it> ;
-    :moreSpecifically
-          [ a sdo:IndividualProduct ;
-            bf1:heldBy <https://libris.kb.se/library/APIS> ;
-            sdo:inventoryLevel 1 ;
+    kbv:heldPart
+          [ a kbv:Item ;
             bf1:electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:scb-2015-x43br1501_pdf" ;
             bf1:identifier [a bf1:identifierScheme "urn" ;
              bf1:identifierValue "urn:nbn:se:scb-2015-x43br1501_pdf" ] .
 
 ## SCBs holding. De har inte preciserat mer info än sigel. Då går det inte heller säga ngt om antalet exemplar.
 
-</42683212#it> a sdo:SomeProducts, sdo:Offer, bf1:HeldMaterial, bf2:Item ;
+</42683212#it> a kbv:Holding ;
     :acquisitionStatus :CurrentlyReceived ;
     :retentionPolicy :PermanentlyRetained ;
-    sdo:inventoryLevel ;
     bf1:heldBy <https://libris.kb.se/library/B> ;
     bf1:holdingFor <http://libris.kb.se/resource/bib/17650993#it> ;
 

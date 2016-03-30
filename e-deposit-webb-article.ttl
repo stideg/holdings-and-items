@@ -4,21 +4,18 @@
 @prefix sdo: <http://schema.org/> .
 @prefix bf1: <http://bibframe.org/vocab/> .
 @prefix bf2: <http://bibframe.org/vocab/> . # TODO: new URI?
-@prefix : <https://id.kb.se/vocab/> .
+@prefix kbv: <https://id.kb.se/vocab/> .
 @base <https://libris.kb.se/> .
 
 ## E-plikt webb-artikel:
 
-</42670731#it> a sdo:SomeProducts, sdo:Offer, bf1:HeldMaterial, bf2:Item ;
+</42670731#it> a kbv:Holding ;
     :acquisitionStatus :CurrentlyReceived ;
     :retentionPolicy :PermanentlyRetained ;
-    sdo:inventoryLevel 1 ;
     bf1:heldBy <https://libris.kb.se/library/APIS> ;
     bf1:holdingFor <http://libris.kb.se/resource/bib/17641863#it> ;
-    :moreSpecifically
-          [ a sdo:IndividualProduct ;
-            bf1:heldBy <https://libris.kb.se/library/APIS> ;
-            sdo:inventoryLevel 1 ;
+    kbv:heldPart
+          [ a kbv:Item ;
             bf1:electronicLocator "http://urn.kb.se/resolve?urn=urn:nbn:se:kb:dark-4530939" ;
             bf1:identifier [a bf1:identifierScheme "urn" ;
              bf1:identifierValue "urn:nbn:se:kb:dark-4530939" ] .
